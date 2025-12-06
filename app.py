@@ -24,7 +24,8 @@ if st.button("Prediksi"):
     pred = model.predict(padded)[0][0]
 
     if pred >= 0.5:
-        st.error(f"Cyberbullying 😡 (score: {pred:.2f})")
+        st.error(f"Cyberbullying (score: {pred:.2f})")
     else:
-        st.success(f"Non-Cyberbullying 😄 (score: {1-pred:.2f})")
+        st.success(f"Non-Cyberbullying (score: {1-pred:.2f})")
+
 
